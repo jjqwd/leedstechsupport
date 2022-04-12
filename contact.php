@@ -24,7 +24,7 @@
                 <p class="big-text">We love to hear from new clients. Get in touch today and see what we can do for you.</p>
 
                 <p class="big-text">call or whatsapp +44 (0) 7516 568726</p>
-                <p class="big-text">email info (at) leedstechsupport.co.uk</p>
+                <p class="big-text">email <a href="mailto:info@leedstechsupport.com">info (at) leedstechsupport.co.uk</a></p>
 
             
             </div>
