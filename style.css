@@ -1,0 +1,245 @@
+/* fonts */
+
+@font-face {
+    font-family: "Cerebri Sans Bold Italic";
+    src: url("/fonts/Cerebri Sans Bold Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Cerebri Sans Bold";
+    src: url("/fonts/Cerebri Sans Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Cerebri Sans Book";
+    src: url("/fonts/Cerebri Sans Book.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Cerebri Sans SemiBold Italic";
+    src: url("/fonts/Cerebri Sans SemiBold Italic.ttf") format("truetype");
+}
+
+/* grid layout */
+
+body {
+    margin: 0;
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 17% 83%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "sidebar content";
+}
+
+#sidebar {
+    grid-area: sidebar;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20vh 55vh 15vh 10vh;
+    grid-template-areas: 
+    "logo" "empty" "nav" "footer";
+    padding-left: 10%;
+    background: #CCDDED;
+}
+
+#logo {
+    grid-area: logo;
+    align-self: center;
+}
+
+#nav {
+    grid-area: nav;
+    align-self: end;
+}
+
+#footer {
+    grid-area: footer;
+    align-self: end;
+}
+
+#content {
+    grid-area: content;
+    height: 100vh;
+    padding-left: 4%;
+}
+
+.content {
+    grid-area: inner-content;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 60% auto;
+    grid-template-areas: 
+    "page-title" "page-content";
+    padding-right: 5vw;
+    margin-bottom: 10vh;
+}
+
+.page-title-div {
+    grid-area: page-title;
+    align-self: end;
+}
+
+.page-content-div {
+    grid-area: page-content;
+}
+
+/* styling */
+
+body {
+    font-family:"Cerebri Sans Book";
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+a:link {
+    color: #000;
+}
+a:visited {
+    color: #000;
+}
+a:hover {
+    color: #555;
+}
+a:active {
+    color: #555;
+}
+
+#logo {
+    font-family: "Cerebri Sans Bold";
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+#nav ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+#nav ul li {
+    font-family: "Cerebri Sans Bold Italic";
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding-top: 15px;
+}
+
+.page-title {
+    font-family: "Cerebri Sans SemiBold Italic";
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.big-text {
+    font-size: 2em;
+    font-family: "Cerebri Sans Bold";
+    text-transform: uppercase;
+    margin-block-end: 0.1em;
+}
+
+.normal-text {
+    font-size: 1.5em;
+    text-transform: none;
+}
+
+
+/* pages */
+
+.content-home {
+    background: url('/images/2.png') no-repeat 95% 10%;
+    background-size: 30%;
+    overflow-y: scroll;
+}
+
+.content-services {
+    background: url('/images/3.png') no-repeat 95% 10%;
+    background-size: 30%;
+    overflow-y: scroll;
+}
+
+.content-reviews {
+    background: url('/images/4.png') no-repeat 95% 10%;
+    background-size: 30%;
+    overflow-y: scroll;
+}
+
+.content-contact {
+    background: url('/images/5.png') no-repeat 95% 10%;
+    background-size: 30%;
+    overflow-y: scroll;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 992px) {
+    
+    #container {
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 20% auto;
+        grid-template-areas: 
+        "sidebar" "content";
+    }
+    
+    #sidebar {
+        height: auto;
+        min-height: 20vh;
+        display: flex;
+        justify-content: space-around;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    
+    #logo {
+        font-size: 3.5em;
+    }
+    
+    #nav {
+        align-self: center;
+        font-size: 2em;
+    }
+    
+    #content {
+        height: auto;
+        align-self: center;
+    }
+    
+    .content {
+        height: auto;
+        min-height: 1400px;
+        grid-template-rows: auto;
+        margin-bottom: 0;
+        overflow: auto;
+    }
+    
+    .page-title-div {
+        font-size: 3em;
+    }
+    
+    .big-text {
+        font-size: 4em;
+    }
+    
+    .normal-text {
+        font-size: 2em;
+    }
+    
+    #footer {
+        display: none;
+    }
+    
+    .content-home, .content-services, .content-reviews, .content-contact {
+        background-size: 70%;
+        background-position: bottom right;
+    }
+    
+}
